@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta cherset="UFT-8">
+        <meta cherset="width=width">
+        <title>Learner Infomation</title>
+    </head>
+    <body>
+        <form metode="POST" class="post-form"enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <button type="submit"value='submit'>upload</button>
+        </form>
+    </body>
+
+</html>

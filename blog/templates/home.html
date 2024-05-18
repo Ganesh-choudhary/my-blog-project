@@ -1,0 +1,55 @@
+
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body style="background-color:green">
+        <p>Radhe Krishna-:</p>
+        <p>Radhe Krishna-:</p>
+        <P>Radhe Krishna-:</P>
+        <p>Radhe Krishna-:</p>
+        <p>Radhe Radhe-:</p>
+
+        {% for i in list1 %}
+        <div>{{forloop.last}}{{i}}</div>
+        {% endfor %}
+
+<br><br>
+
+        <table border="1" cellpadding="1">
+            <tr style="background-color:red"><th>name</th><th>last_name</th><th>phone</th></tr>
+
+            {% for i in student %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.last_name}}</td>
+                <td>{{i.phone}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+     {% if x|length > 0 %}
+        {% for i in x %}
+        {% if i > 20 %}
+            <div>{{i}}</div>
+        {%endif%}
+        {% endfor %}
+
+    {% else %}
+        NO Data Printed
+    
+    {% endif %}
+    
+    </body>
+    <style>
+        p{
+            text-align:center;
+            color:red;
+        }
+        h1{
+            text-align:center;
+            color:yellow;
+        }
+    </style>
+</h

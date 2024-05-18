@@ -1,0 +1,39 @@
+<DOCTYPE html>
+    <html>
+        <head><title>{{title}}</title>
+            
+            <link rel="stylesheet"href="/static/css/main.css"/>
+        </head>
+        <body>
+            <h1>welcome Hello</h1>
+            <p>{{bdata}}</p>
+
+            {%for n in list %}
+            <div>
+                {{forloop.last}} {{n}}
+            </div><br><br>
+            {% endfor %}
+
+            <table border="1"width="0"height="0"cellpadding="10"cellspacing="0">
+                <tr><th>name</th><th>phone_number</th></tr>
+                
+                {%for d in student %}
+                <tr>
+                <td>{{d.name}}</td>
+                <td>{{d.phone}}</td>
+            </tr>
+                {% endfor %}
+            </table><br>
+
+
+            {%if number > 0%}
+            {%for i in number%}
+                {% if i > 6 %}
+                    <div>{{i}}</div>
+                {% endif%}
+            {%endfor%}
+            {%else%}
+                NO data Found
+            {%endif%}
+        </body>
+    </html>
